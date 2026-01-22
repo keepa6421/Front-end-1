@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cover">
+        <div class="profile-pic">
+          <a href="https://postimg.cc/62tVPjmb">
+            <img
+              src="https://i.postimg.cc/85ryjxBG/keepa.jpg"
+              alt="Hero Alom"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="text-center">
+        <h1>Keepa Maharjan</h1>
+        <p class="subtitle">Student</p>
+      </div>
+      <div class="main">
+        <ul class="tabs">
+          <li data-target="intro" class="active">About me</li>
+          <li data-target="history">Projects</li>
+          <li data-target="video">Video</li>
+          <li data-target="demos">Project Demos</li>
+          <li data-target="contact">Contact</li>
+        </ul>
+        <div id="intro" class="tab-content active">
+          <p>
+            Hi, I’m Keepa, a Computer Science and Mathematics major at Caldwell
+            University with a strong interest in problem solving, logical
+            reasoning, and analytical thinking. I am passionate about learning
+            and enjoy exploring how theory and practice connect, especially in
+            technical and quantitative fields. As an international student, I
+            have developed resilience, adaptability, and a strong work ethic. I
+            am actively involved in academic and service-oriented activities,
+            which have strengthened my communication skills and teamwork. I
+            value stepping out of my comfort zone, embracing challenges, and
+            continuously growing both academically and personally while working
+            toward meaningful goals.
+          </p>
+        </div>
+        <div id="history" class="tab-content">
+          <strong>Projects</strong>
+          <p>
+            I have worked on programming-based projects using HTML, CSS, and
+            JavaScript to build responsive and interactive web applications,
+            which strengthened my technical skills and understanding of
+            front-end development.
+          </p>
+          <strong>Technical Skills</strong>
+          <p>
+            I am skilled in problem solving, logical reasoning, and programming,
+            with a strong foundation in computer science and mathematics.
+          </p>
+          <strong>Soft Skills</strong>
+          <p>
+            I bring strong communication, teamwork, adaptability, and a
+            disciplined work ethic, allowing me to contribute effectively in
+            both academic and collaborative environments.
+          </p>
+        </div>
+        <div id="video" class="tab-content">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/mqL5SG49TWc"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+        <div id="demos" class="tab-content">
+          <h3>Project Demos</h3>
+
+          <!-- Weather App Demo -->
+          <div class="demo-section">
+            <h4>Weather App Demo</h4>
+            <div class="weather-widget">
+              <div class="weather-input-container">
+                <input
+                  type="text"
+                  id="cityInput"
+                  placeholder="Enter city name"
+                />
+                <button onclick="getWeather()" class="weather-btn">
+                  Get Weather
+                </button>
+                <button
+                  onclick="getWeatherByLocation()"
+                  class="weather-btn location-btn"
+                  title="Get weather for your current location"
+                >
+                  📍 Use My Location
+                </button>
+              </div>
+              <div id="weather-info">
+                <p>Enter a city name or use your location to see the weather</p>
+              </div>
+            </div>
+            <p class="demo-description">
+              Interactive weather application with real-time data fetching
+              capabilities
+            </p>
+          </div>
+
+          <!-- Map Demo -->
+          <div class="demo-section">
+            <h4>Interactive Map Demo</h4>
+            <div style="margin-bottom: 15px; text-align: center">
+              <button
+                onclick="showMyLocation()"
+                class="weather-btn location-btn"
+                style="margin: 0 auto"
+              >
+                📍 Show My Location
+              </button>
+            </div>
+            <div class="map-container">
+              <iframe
+                id="mapFrame"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132239028!2d-74.00594138459418!3d40.71277597932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a258c4b5b5b%3A0x1e3b8b8b8b8b8b8b!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                frameborder="0"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <div
+              id="location-info"
+              style="
+                text-align: center;
+                margin-top: 10px;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 14px;
+              "
+            ></div>
+            <p class="map-description">
+              Interactive map showing location - Click the button above to see
+              your current location
+            </p>
+          </div>
+
+          <!-- Music Player Demo -->
+          <div class="demo-section">
+            <h4>Music Player Demo</h4>
+            <div class="music-player">
+              <div class="music-info">
+                <h4 id="song-title">Sample Song</h4>
+                <p id="song-artist">Demo Artist</p>
+              </div>
+              <audio id="audio-player" controls>
+                <source
+                  src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                  type="audio/mpeg"
+                />
+                Your browser does not support the audio element.
+              </audio>
+              <div class="music-controls">
+                <button
+                  onclick="playPause()"
+                  id="playPauseBtn"
+                  class="music-btn play"
+                >
+                  Play
+                </button>
+                <button onclick="stopMusic()" class="music-btn stop">
+                  Stop
+                </button>
+              </div>
+              <div class="volume-control">
+                <label>Volume:</label>
+                <input
+                  type="range"
+                  id="volumeControl"
+                  min="0"
+                  max="100"
+                  value="50"
+                  onchange="setVolume(this.value)"
+                />
+                <span id="volumeValue" class="volume-value">50%</span>
+              </div>
+            </div>
+            <p class="demo-description">
+              This is a demo of a music player project with play, pause, stop,
+              and volume controls
+            </p>
+          </div>
+        </div>
+        <div id="contact" class="tab-content">
+          <form action="https://www.w3schools.com/action_page.php">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="" />
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="" />
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Please write your message here..."
+              style="height: 150px"
+            ></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+      <div class="chatbot-header">
+        <h3>Chat with me</h3>
+        <button class="chatbot-close" id="chatbotClose">&times;</button>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot-message">
+          <p>
+            Hello! I'm here to help. Ask me anything about Keepa or this
+            portfolio!
+          </p>
+        </div>
+      </div>
+      <div class="chatbot-input-container">
+        <input
+          type="text"
+          id="chatbotInput"
+          placeholder="Type your message..."
+          autocomplete="off"
+        />
+        <button id="chatbotSend">Send</button>
+      </div>
+    </div>
+    <button class="chatbot-toggle" id="chatbotToggle">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+        ></path>
+      </svg>
+    </button>
+
+    <script src="app.js"></script>
+  </body>
+</html>

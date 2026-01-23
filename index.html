@@ -214,7 +214,7 @@
             </p>
           </div>
         </div>
-        <div id="contact" class="tab-content">
+        <!-- <div id="contact" class="tab-content">
           <form action="https://www.w3schools.com/action_page.php">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="" />
@@ -231,7 +231,21 @@
             ></textarea>
             <button type="submit">Submit</button>
           </form>
-        </div>
+        </div> -->
+        <div id="contact" class="tab-content">
+      <form action="https://formspree.io/f/mjvngvzd" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Your Email" required>
+         <label for="subject">Subject</label>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Message..." rows="4" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
       </div>
     </div>
 
